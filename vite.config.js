@@ -9,6 +9,6 @@ export default defineConfig({
     },
   },
   plugins: [react()],
-  // base: "/My-Portfolio/", 
+  base: "/host-myportfolio/"
 });
 
