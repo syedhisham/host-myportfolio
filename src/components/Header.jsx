@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { gsap } from "gsap";
 import HorizontalLine from "./HorizontalLine";
 
-const Header = ({ textColorClass, fontClass, bgClass }) => {
+const Header = () => {
   const [showPhone, setShowPhone] = useState(false);
   const [showEnvelop, setShowEnvelop] = useState(false);
   const [showHeading, setShowHeading] = useState(true);
@@ -37,7 +37,7 @@ const Header = ({ textColorClass, fontClass, bgClass }) => {
   };
 
   return (
-    <header className={`relative ${bgClass} ${fontClass} ${textColorClass}`}>
+    <header className={`relative  text-white`}>
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center relative z-10">
         <div className="h-8">
           <div className={`${showHeading ? "block" : "hidden"} w-full`}>
@@ -52,16 +52,16 @@ const Header = ({ textColorClass, fontClass, bgClass }) => {
             ref={emailRef}
             onClick={handleEmailClick}
           >
-            <FaEnvelope className={`${textColorClass}`} />
-            <span className={`ml-2 ${textColorClass} cursor-pointer`}>
+            <FaEnvelope className={`text-white`} />
+            <span className={`ml-2 text-white cursor-pointer`}>
               syedhishamshah49@gmail.com
             </span>
           </div>
 
           <div className={`flex items-center relative`} ref={phoneRef}>
-            <FaWhatsapp className={`${textColorClass}`} />
+            <FaWhatsapp className={`text-white`} />
             <span
-              className={`ml-2 ${textColorClass} cursor-pointer`}
+              className={`ml-2 text-white cursor-pointer`}
               onClick={handlePhoneClick}
             >
               +923038144158
@@ -76,7 +76,7 @@ const Header = ({ textColorClass, fontClass, bgClass }) => {
             ref={emailRef}
           >
             <FaEnvelope
-              className={`${textColorClass} cursor-pointer`}
+              className={`text-white cursor-pointer`}
               onClick={toggleEnvelop}
             />
             {showEnvelop && (
@@ -94,7 +94,7 @@ const Header = ({ textColorClass, fontClass, bgClass }) => {
             ref={phoneRef}
           >
             <FaWhatsapp
-              className={`${textColorClass} cursor-pointer`}
+              className={`text-white cursor-pointer`}
               onClick={toggleWhatsapp} 
             />
             {showPhone && (

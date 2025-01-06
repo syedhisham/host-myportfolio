@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const MyProjectsHeading = ({textColorClass}) => {
+const MyProjectsHeading = () => {
   const [textIndex, setTextIndex] = useState(0);
   const [currentText, setCurrentText] = useState('My');
   const texts = ['Projects', 'Hard Work', 'Journey', 'Passion']; // Changing part of the text

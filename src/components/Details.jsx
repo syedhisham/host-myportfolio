@@ -6,7 +6,7 @@ import { AiOutlineTwitter } from "react-icons/ai";
 import { motion } from "framer-motion";
 import HorizontalLine from "./HorizontalLine";
 
-const Details = ({ textColorClass, fontClass, bgClass }) => {
+const Details = () => {
   const discordId = import.meta.env.VITE_DISCORD_ID;
   const name = "Syed Hisham";
   // Variants for letter animation
@@ -32,16 +32,16 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
   };
 
   return (
-    <div className={`w-full ${fontClass}`}>
+    <div className={`w-full mullish`}>
       <div className="flex flex-col p-4 md:p-0 lg:flex-row mx-auto max-w-5xl gap-10 lg:gap-20 ">
         {/* Left Container */}
         <div
-          className={`lg:w-1/2 w-full lg:sticky top-0 lg:h-screen ${textColorClass} flex flex-col justify-around overflow-x-hidden`}
+          className={`lg:w-1/2 w-full lg:sticky top-0 lg:h-screen text-white flex flex-col justify-around overflow-x-hidden`}
         >
           <div>
             {/* Animating each letter in h1 */}
             <motion.h1
-              className={`text-4xl lg:text-5xl font-extrabold ${textColorClass} mb-4`}
+              className={`text-4xl lg:text-5xl font-extrabold text-white mb-4`}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -115,7 +115,7 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
               href="https://github.com/syedhisham"
               target="_blank"
               rel="noopener noreferrer"
-              className={`${textColorClass} hover:text-gray-300`}
+              className={`text-white hover:text-gray-300`}
             >
               <FaGithub size={28} />
             </a>
@@ -123,7 +123,7 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
               href="https://twitter.com/yourusername"
               target="_blank"
               rel="noopener noreferrer"
-              className={`${textColorClass} hover:text-gray-300`}
+              className={`text-white hover:text-gray-300`}
             >
               <AiOutlineTwitter size={28} />
             </a>
@@ -131,7 +131,7 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
               href="https://www.instagram.com/syedhishamshah/"
               target="_blank"
               rel="noopener noreferrer"
-              className={`${textColorClass} hover:text-gray-300`}
+              className={`text-white hover:text-gray-300`}
             >
               <FaInstagram size={28} />
             </a>
@@ -139,7 +139,7 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
               href="https://wa.me/923038144158"
               target="_blank"
               rel="noopener noreferrer"
-              className={`${textColorClass} hover:text-gray-300`}
+              className={`text-white hover:text-gray-300`}
             >
               <FaWhatsapp size={28} />
             </a>
@@ -147,7 +147,7 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
               href={`https://discord.com/users/${discordId}`}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${textColorClass} hover:text-gray-300`}
+              className={`text-white hover:text-gray-300`}
             >
               <FaDiscord size={28} />
             </a>
@@ -156,7 +156,7 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
 
         {/* Right Container */}
         <div
-          className={`lg:w-2/3 w-full text-md ${textColorClass} pt-10 lg:pt-32 overflow-x-hidden`}
+          className={`lg:w-2/3 w-full text-md text-white pt-10 lg:pt-32 overflow-x-hidden`}
         >
           <Element name="aboutMe" className="mb-12 relative z-10 blue-gray">
             <p className={`mb-4`}>
@@ -175,11 +175,7 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
           <Element name="experience" className="mb-12 relative z-1">
             <ul className="list-none space-y-3">
               <div
-                className={`flex justify-center ${
-                  bgClass === "white"
-                    ? "hover:bg-gray-50"
-                    : "hover:bg-white/10"
-                } gap-2 transition-all duration-150 ease-in-out p-5 rounded-md blue-gray`}
+                className={`flex justify-center hover:bg-white/10 gap-2 transition-all duration-150 ease-in-out p-5 rounded-md blue-gray`}
               >
                 <p className="w-1/3 text-sm awsomeIndigoColor">2015 — 2017</p>
                 <li className="w-full pl-3 md:pl-10 lg:pl-10">
@@ -192,11 +188,7 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
               </div>
 
               <div
-                className={`flex justify-center ${
-                  bgClass === "white"
-                    ? "hover:bg-gray-50"
-                    : "hover:bg-white/10"
-                } gap-2 transition-all duration-150 ease-in-out p-5 rounded-md blue-gray`}
+                className={`flex justify-center hover:bg-white/10 gap-2 transition-all duration-150 ease-in-out p-5 rounded-md blue-gray`}
               >
                 <p className="w-1/3 text-sm awsomeIndigoColor">2017 — 2019</p>
                 <li className="w-full pl-3 md:pl-10 lg:pl-10">
@@ -208,11 +200,7 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
                 </li>
               </div>
               <div
-                className={`flex justify-center ${
-                  bgClass === "white"
-                    ? "hover:bg-gray-50"
-                    : "hover:bg-white/10"
-                } gap-2 transition-all duration-150 ease-in-out p-5 rounded-md blue-gray`}
+                className={`flex justify-center hover:bg-white/10 gap-2 transition-all duration-150 ease-in-out p-5 rounded-md blue-gray`}
               >
                 <p className="w-1/3 text-sm awsomeIndigoColor">2021 — PRESENT</p>
                 <li className="w-full pl-3 md:pl-10 lg:pl-10">
@@ -227,9 +215,7 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
           </Element>
           <Element name="skills" className="mb-12">
             <ul
-              className={`space-y-2 flex flex-col ${
-                bgClass === "white" ? "hover:bg-gray-50" : "hover:bg-white/10"
-              } rounded-md blue-gray p-0 md:p-3 lg:p-4`}
+              className={`space-y-2 flex flex-col hover:bg-white/10 rounded-md blue-gray p-0 md:p-3 lg:p-4`}
             >
               <li className="p-2">
                 Proficient in HTML, CSS, Tailwind CSS, JavaScript, and React
@@ -246,79 +232,57 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
               </li>
               <div className="flex flex-wrap gap-2 mt-2">
                 <p
-                  className={`${
-                    bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                  } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                  className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                 >
                   HTML
                 </p>
                 <p
-                  className={`${
-                    bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                  } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                  className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                 >
                   CSS
                 </p>
                 <p
-                  className={`${
-                    bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                  } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                  className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                 >
                   Tailwind CSS
                 </p>
                 <p
-                  className={`${
-                    bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                  } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                  className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                 >
                   Bootstrap
                 </p>
                 <p
-                  className={`${
-                    bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                  } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                  className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                 >
                   JavaScript
                 </p>
                 <p
-                  className={`${
-                    bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                  } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                  className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                 >
                   Material Tailwind CSS
                 </p>
                 <p
-                  className={`${
-                    bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                  } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                  className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                 >
                   React
                 </p>
                 <p
-                  className={`${
-                    bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                  } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                  className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                 >
                   MongoDB
                 </p>
                 <p
-                  className={`${
-                    bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                  } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                  className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                 >
                   Node.js
                 </p>
                 <p
-                  className={`${
-                    bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                  } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                  className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                 >
                   Express
                 </p>
                 <p
-                  className={`${
-                    bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                  } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                  className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                 >
                   Git
                 </p>
@@ -329,11 +293,7 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
           <Element name="projects" className="mb-12">
             <ul className="space-y-2">
               <li
-                className={`flex items-start group cursor-pointer ${
-                  bgClass === "white"
-                    ? "hover:bg-gray-50"
-                    : "hover:bg-white/10"
-                } rounded-md p-10 transition-all duration-200 ease-in-out blue-gray`}
+                className={`flex items-start group cursor-pointer hover:bg-white/10 rounded-md p-10 transition-all duration-200 ease-in-out blue-gray`}
               >
                 <img
                   src="https://res.cloudinary.com/dqlyxvgcc/image/upload/v1736008920/MyPortfolio/Images/nfgihppprwgkk23cg965.png"
@@ -343,7 +303,7 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
                 <div className={``}>
                   <div className={`flex flex-row items-start`}>
                     <p
-                      className={`-mr-48 group-hover:${textColorClass} awsomeTextColor transition-all duration-200 ease-in-out `}
+                      className={`-mr-48 group-hover:text-white awsomeTextColor transition-all duration-200 ease-in-out `}
                     >
                       HandicraftStore
                     </p>
@@ -354,58 +314,42 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
                   </p>
                   <div className="flex flex-wrap gap-2 mt-2">
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       React.js
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       Node.js
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       MongoDB
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       Tailwind CSS
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       Nodemailer
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       JWT
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       Cloudinary
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       Stripe
                     </p>
@@ -414,11 +358,7 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
               </li>
 
               <li
-                className={`flex blue-gray items-start group cursor-pointer ${
-                  bgClass === "white"
-                    ? "hover:bg-gray-50"
-                    : "hover:bg-white/10"
-                } rounded-md p-10 transition-all duration-200 ease-in-out`}
+                className={`flex blue-gray items-start group cursor-pointer hover:bg-white/10 rounded-md p-10 transition-all duration-200 ease-in-out`}
               >
                 <img
                   src="https://res.cloudinary.com/dqlyxvgcc/image/upload/v1736008900/MyPortfolio/Images/c8zvybfkvkc4cb7dpdo3.jpg"
@@ -428,7 +368,7 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
                 <div className={``}>
                   <div className={`flex flex-row items-start`}>
                     <p
-                      className={`-mr-32 group-hover:${textColorClass} awsomeTextColor transition-all duration-200 ease-in-out`}
+                      className={`-mr-32 group-hover:text-white awsomeTextColor transition-all duration-200 ease-in-out`}
                     >
                       E-Commerce Shoe Store
                     </p>
@@ -439,44 +379,32 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
                   </p>
                   <div className="flex flex-wrap gap-2 mt-2">
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       React.js
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       Node.js
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       MongoDB
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       Tailwind CSS
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       JWT
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       Cloudinary
                     </p>
@@ -484,11 +412,7 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
                 </div>
               </li>
               <li
-                className={`flex blue-gray items-start group cursor-pointer ${
-                  bgClass === "white"
-                    ? "hover:bg-gray-50"
-                    : "hover:bg-white/10"
-                } rounded-md p-10 transition-all duration-200 ease-in-out`}
+                className={`flex blue-gray items-start group cursor-pointer hover:bg-white/10 rounded-md p-10 transition-all duration-200 ease-in-out`}
               >
                 <img
                   src="https://res.cloudinary.com/dqlyxvgcc/image/upload/v1736008975/MyPortfolio/Images/e0ttcjxvbmwvhfqpnfeo.jpg"
@@ -498,7 +422,7 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
                 <div className={``}>
                   <div className={`flex flex-row items-start`}>
                     <p
-                      className={`-mr-60 group-hover:${textColorClass} awsomeTextColor transition-all duration-200 ease-in-out`}
+                      className={`-mr-60 group-hover:text-white awsomeTextColor transition-all duration-200 ease-in-out`}
                     >
                       TaskFlow
                     </p>
@@ -509,37 +433,27 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
                   </p>
                   <div className="flex flex-wrap gap-2 mt-2">
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       React.js
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       Node.js
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       MongoDB
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       Express
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       CSS
                     </p>
@@ -548,11 +462,7 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
               </li>
 
               <li
-                className={`flex items-start group cursor-pointer ${
-                  bgClass === "white"
-                    ? "hover:bg-gray-50"
-                    : "hover:bg-white/10"
-                } rounded-md p-10 transition-all duration-200 ease-in-out blue-gray`}
+                className={`flex items-start group cursor-pointer hover:bg-white/10 rounded-md p-10 transition-all duration-200 ease-in-out blue-gray`}
               >
                 <img
                   src="https://res.cloudinary.com/dqlyxvgcc/image/upload/v1736008910/MyPortfolio/Images/rjrxrbe2srje1pxj6srx.png" 
@@ -562,7 +472,7 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
                 <div className={``}>
                   <div className={`flex flex-row items-start`}>
                     <p
-                      className={`-mr-52 group-hover:${textColorClass} awsomeTextColor transition-all duration-200 ease-in-out `}
+                      className={`-mr-52 group-hover:text-white awsomeTextColor transition-all duration-200 ease-in-out `}
                     >
                       PoultryPal
                     </p>
@@ -573,65 +483,47 @@ const Details = ({ textColorClass, fontClass, bgClass }) => {
                   </p>
                   <div className="flex flex-wrap gap-2 mt-2">
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       React.js
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       Node.js
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       MongoDB
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       Tailwind CSS
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       Nodemailer
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       JWT
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       Cloudinary
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       Stripe
                     </p>
                     <p
-                      className={`${
-                        bgClass === "white" ? "bg-gray-200" : "bg-white/10"
-                      } p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
+                      className={`hover:bg-white/10 p-1 rounded-3xl pl-4 pr-4 text-sm awsomeTextColor`}
                     >
                       Redux
                     </p>

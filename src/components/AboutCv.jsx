@@ -3,7 +3,7 @@ import { Button } from "@material-tailwind/react";
 import { LiaArrowRightSolid } from "react-icons/lia";
 import HorizontalLine from "./HorizontalLine";
 
-const AboutCv = ({ textColorClass, fontClass, bgClass }) => {
+const AboutCv = () => {
   const handleCvNavigation = () => {
     // Navigate to CV or download it
     window.open("/cv/PortCV.pdf", "_blank");
@@ -30,7 +30,7 @@ const AboutCv = ({ textColorClass, fontClass, bgClass }) => {
           <Button
             onClick={handleCvNavigation}
             variant="outlined"
-            className={`w-64 px-4 py-2 text-sm font-medium awsomeIndigoColor border-${textColorClass} rounded-lg group-hover:bg-white/20 relative flex items-center justify-center`}
+            className={`w-64 px-4 py-2 text-sm font-medium awsomeIndigoColor border-white rounded-lg group-hover:bg-white/20 relative flex items-center justify-center`}
             title="My CV"
           >
             <span className="ml-10 mr-2">View my CV</span>

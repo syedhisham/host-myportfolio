@@ -53,10 +53,10 @@ const VideoGallery = ({ textColorClass, fontClass }) => {
   ];
 
   return (
-    <div className={`py-10 ${fontClass}`}>
+    <div className={`py-10 mullish`}>
       <div className="container mx-auto px-4 lg:px-0 mt-20 mb-20 max-w-5xl">
         {/* Heading Section */}
-        <MyProjectsHeading textColorClass={textColorClass} />
+        <MyProjectsHeading />
         <div className="space-y-20">
           {videos.map((video, index) => (
             <div
@@ -88,7 +88,7 @@ const VideoGallery = ({ textColorClass, fontClass }) => {
                 >
                   <Button
                     variant="outlined"
-                    className={`w-64 px-4 py-2 text-sm font-medium awsomeIndigoColor border-${textColorClass} rounded-lg hover:bg-white/20`}
+                    className={`w-64 px-4 py-2 text-sm font-medium awsomeIndigoColor border-white rounded-lg hover:bg-white/20`}
                     title="Git repository link"
                   >
                     View on GitHub

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import HorizontalLine from "./HorizontalLine";
 
-const SkillsCards = ({ textColorClass, fontClass }) => {
+const SkillsCards = () => {
   const [cards, setCards] = useState([
     { id: 1, color: "#FF6347", title: "Full-Stack" },
     { id: 2, color: "#32CD32", title: "React.js" },
@@ -23,13 +23,13 @@ const SkillsCards = ({ textColorClass, fontClass }) => {
   };
 
   return (
-    <div className={`container mx-auto text-current ${fontClass}`}>
+    <div className={`container mx-auto text-current mullish`}>
       <div className=" gap-y-12 mx-auto flex flex-col lg:flex-row justify-between gap-80 items-start h-auto px-4 lg:px-0 py-8 mb-80 lg:mb-60 mt-10 lg:mt-40 max-w-5xl">
         <div className="flex flex-1 flex-col justify-center items-start w-full lg:w-1/3 mb-8 lg:mb-0">
           <h2 className={`text-3xl font-bold awsomeTextColor mb-4`}>
             My Skills
           </h2>
-          <p className={`text-lg ${textColorClass} blue-gray`}>
+          <p className={`text-lg text-white blue-gray`}>
             A showcase of my technical skills and expertise in various
             technologies.
           </p>
@@ -40,7 +40,7 @@ const SkillsCards = ({ textColorClass, fontClass }) => {
             {cards.map((card, index) => (
               <div
                 key={card.id}
-                className={`absolute w-48 md:w-60 lg:w-60 h-40 ml-2 md:ml-0 lg:ml-0 rounded-xl shadow-2xl flex justify-center items-center ${textColorClass} font-semibold text-xl transform transition-all duration-300 ease-in-out
+                className={`absolute w-48 md:w-60 lg:w-60 h-40 ml-2 md:ml-0 lg:ml-0 rounded-xl shadow-2xl flex justify-center items-center text-white font-semibold text-xl transform transition-all duration-300 ease-in-out
                 ${index === 0 ? "z-10" : "z-0"} 
                 ${index === 0 ? "scale-100" : "scale-90"} cursor-pointer`}
                 style={{
