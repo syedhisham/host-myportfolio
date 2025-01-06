@@ -55,7 +55,7 @@ const Home = () => {
         <div className="mt-8">
           <ProjectsShowcase />
         </div>
-        <div className="">
+        <div className="mt-1">
           <AboutCv />
         </div>
       </div>
