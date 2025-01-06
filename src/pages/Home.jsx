@@ -79,6 +79,10 @@ const Home = () => {
   if (isLoading) {
     return <LoadingPage textColorClass={textColorClass} fontClass={fontClass} bgClass={bgClass} />;
   }
+  console.log(localStorage.getItem("fontClass"));
+console.log(localStorage.getItem("bgClass"));
+console.log(localStorage.getItem("textColorClass"));
+
 
   return (
     <div className="scroll-smooth">
