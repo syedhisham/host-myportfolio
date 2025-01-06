@@ -82,6 +82,7 @@ const Home = () => {
   console.log(localStorage.getItem("fontClass"));
 console.log(localStorage.getItem("bgClass"));
 console.log(localStorage.getItem("textColorClass"));
+console.log(localStorage.getItem("isLoading"));
 
 
   return (
